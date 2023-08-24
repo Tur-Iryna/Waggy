@@ -1,0 +1,75 @@
+$text-color: #41403E;
+$accent-color: #DEAD6F;
+$bg-color: #F9F3EC;
+$bg-card: #EEEBE5;
+
+%roboto-300 {
+  font-family: 'RobotoSlab-Light';
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+%roboto-400 {
+  font-family: 'RobotoSlab-Regular';
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+%opensans-300 {
+  font-family: 'RobotoSlab-Light';
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+%opensans-400 {
+  font-family: 'RobotoSlab-Light';
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+%comfortaa-400 {
+  font-family: 'Comfortaa-VariableFont_wght', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%yesevaone-400 {
+  font-family: 'YesevaOne-Regular', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+%btn {
+  @extend %opensans-400;
+  color: $text-color;
+  border: 1px solid $text-color;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 15px 10px;
+  transition: all .3s;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $accent-color;
+    color: #ffffff;
+
+  }
+
+
+  &:hover svg {
+    path {
+      fill: #ffffff;
+    }
+  }
+
+}

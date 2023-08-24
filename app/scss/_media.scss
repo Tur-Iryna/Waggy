@@ -1,0 +1,640 @@
+@media (max-width:1240px) {
+  .foodies {
+    &__title {
+      margin-right: 40px;
+      font-size: 40px;
+    }
+
+    &__btn {
+      padding: 15px;
+    }
+
+    &-filters__box {
+      gap: 20px;
+    }
+  }
+
+  .gallery__items {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer {
+    &__inner {
+      gap: 20px;
+    }
+
+  }
+
+  .reviews__desc {
+    max-width: 600px;
+  }
+}
+
+@media (max-width:1115px) {
+  .foodies {
+    &__title {
+      margin-right: 20px;
+      font-size: 35px;
+    }
+  }
+
+}
+
+@media (max-width:1075px) {
+  .header__contacts {
+    gap: 20px;
+  }
+
+  .search-form__input {
+    width: 330px;
+  }
+
+  .foodies {
+    &__title {
+      font-size: 30px;
+    }
+
+    &__info {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  .sale {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__desc {
+      font-size: 40px;
+    }
+
+    &__text {
+      padding-top: 70px;
+    }
+  }
+
+  .purchase__inner:after {
+    display: none;
+  }
+
+  .blog__items {
+    flex-wrap: wrap;
+  }
+
+  .footer__inner {
+    display: block;
+  }
+}
+
+
+
+@media (max-width:975px) {
+  .search-form__input {
+    width: 260px;
+  }
+
+  .menu {
+    &__btn {
+      display: block;
+      padding: 0;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      font-size: 12px;
+
+      &.menu-active span {
+        transform: scale(0);
+      }
+
+      &.menu-active:before {
+        transform: rotate(45deg);
+        top: 10px;
+      }
+
+      &.menu-active:after {
+        transform: rotate(-45deg);
+        bottom: -10px;
+      }
+    }
+
+
+    &__list {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 90px;
+      background-color: $accent-color;
+      display: block;
+      text-align: left;
+      transform: translateY(-200%);
+      transition: all .3s;
+      z-index: 10;
+
+    }
+
+    &__link {
+      display: block;
+      padding: 12px 0;
+
+      &:hover {
+        color: $text-color;
+      }
+    }
+  }
+
+
+  .menu-active+.menu__list {
+    transform: translateY(-8%);
+    top: 90px;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+  }
+
+
+  .header__bottom {
+    justify-content: space-evenly;
+  }
+
+  .slider-box__title span {
+    font-size: 48px;
+  }
+
+  .products-box {
+    gap: 35px;
+    justify-content: center;
+  }
+
+  .gallery__content {
+    margin-left: 5px;
+  }
+
+  .reviews {
+    &__box {
+      padding-left: 90px;
+    }
+
+    &__desc {
+      font-size: 32px;
+      max-width: 450px;
+    }
+
+    &__box::before {
+      left: -100px;
+    }
+  }
+
+  .reviews__inner .slick-dots {
+    margin-left: 335px;
+  }
+}
+
+
+
+
+@media (max-width:850px) {
+  .header {
+    &__top {
+      padding: 15px;
+      flex-direction: column;
+    }
+  }
+
+  .search-form {
+    &__input {
+      display: none;
+      order: 2;
+    }
+
+    &__btn {
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  .slider-box {
+    &__img {
+      width: 350px;
+    }
+
+    &__text {
+      font-size: 20px;
+      padding-top: 100px;
+    }
+  }
+
+  .blog {
+    &__items {
+      display: block;
+
+    }
+
+    &__item {
+      margin-bottom: 30px;
+    }
+  }
+
+  .top-slider {
+    padding-top: 90px;
+  }
+
+  .popup {
+
+    &__content,
+    &-cart__wrapper,
+    &-wishlist__wrapper {
+      width: 600px;
+    }
+
+    &__close,
+    &-wishlist__close,
+    &-cart__close {
+      right: 38px;
+    }
+  }
+}
+
+
+@media (max-width:750px) {
+  .best-products__info {
+    flex-direction: column;
+  }
+
+  .blog-info {
+    flex-direction: column;
+  }
+
+  .reviews {
+    &__box {
+      padding-left: 10px;
+    }
+
+    &__desc {
+      font-size: 28px;
+      max-width: 400px;
+    }
+
+    &__box::before {
+      left: -230px;
+    }
+  }
+}
+
+
+@media (max-width:650px) {
+  .top-slider {
+    padding-bottom: 40px;
+  }
+
+  .slick-dots {
+    top: 25px;
+  }
+
+  .slider-box {
+    &__title span {
+      font-size: 38px;
+    }
+
+    &__text {
+      font-size: 19px;
+    }
+
+    &__btn {
+      padding: 10px 10px;
+    }
+
+    &__img {
+      width: 250px;
+    }
+  }
+
+  .products {
+    padding-top: 50px;
+
+    &-box {
+      flex-direction: column;
+    }
+
+    &-box__link {
+      font-size: 20px;
+    }
+  }
+
+
+  .products__clothing {
+    padding-top: 50px;
+
+    &-info {
+      flex-direction: column;
+    }
+
+    &-title {
+      font-size: 35px;
+    }
+
+    &-button {
+      padding: 15px;
+    }
+
+  }
+
+  .products-content {
+    &__image {
+      width: 280px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+  }
+
+  .foodies,
+  .blog {
+    padding: 40px 0;
+  }
+
+  .sale {
+    &__text {
+      padding-left: 30px;
+    }
+  }
+
+  .best-products {
+    padding: 40px 0;
+    padding-bottom: 60px;
+
+    &__title {
+      font-size: 32px;
+    }
+  }
+
+  .gallery {
+    padding: 30px 0;
+
+    &__items {
+      gap: 30px;
+      padding-bottom: 50px;
+    }
+
+  }
+
+  .footer {
+    padding-bottom: 40px;
+  }
+
+  .reviews {
+    &__box::before {
+      display: none;
+
+    }
+
+    &__content {
+      margin-left: 40px;
+    }
+
+    &__desc {
+      max-width: 400px;
+    }
+  }
+
+  .title {
+    font-size: 30px;
+
+  }
+
+  .popup {
+
+    &__content,
+    &-cart__wrapper,
+    &-wishlist__wrapper {
+      max-width: 450px;
+    }
+
+    &-cart__close {
+      right: -15px;
+      font-size: 30px;
+    }
+
+    &-cart__title {
+      font-size: 19px;
+    }
+
+    &-cart__total {
+      font-size: 14px;
+    }
+
+    &-cart__btn {
+      padding: 15px;
+      font-size: 13px;
+    }
+  }
+
+  .cart-item__content-title {
+    font-size: 13px;
+  }
+}
+
+@media (max-width:550px) {
+  .purchase__title {
+    font-size: 30px;
+  }
+
+  .foodies {
+    &-filters__btn {
+      font-size: 15px;
+    }
+
+    &-filters__box {
+      flex-direction: column;
+    }
+  }
+
+  .sale {
+    &__title {
+      font-size: 51px;
+    }
+
+    &__desc {
+      font-size: 30px;
+      line-height: 31px;
+    }
+  }
+
+  .reviews {
+    &__desc {
+      font-size: 23px;
+      line-height: 30px;
+    }
+
+    &__inner .slick-dots {
+      margin-left: 52px;
+    }
+  }
+
+  .blog {
+    &__item-title {
+      font-size: 20px;
+    }
+
+    &__item-desc {
+      font-size: 15px;
+    }
+  }
+
+  .slider {
+    &-box__title {
+      line-height: 20px;
+    }
+
+    &-box__info {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+}
+
+
+
+@media (max-width:490px) {
+  .popup {
+
+    &__content,
+    &-cart__wrapper,
+    &-wishlist__wrapper {
+      max-width: 350px;
+    }
+
+    &-cart__btn {
+      padding: 10px;
+    }
+
+    &-cart__total {
+      font-size: 13px;
+    }
+
+    &-cart__input::placeholder {
+      font-size: 13px;
+    }
+  }
+
+  .cart-item {
+    flex-direction: column;
+    margin: 10px 0 15px;
+    gap: 5px;
+
+    &__counter {
+      margin-left: 0;
+    }
+  }
+}
+
+
+@media (max-width:450px) {
+  .header__contacts {
+    font-size: 16px;
+  }
+
+  .slider-box {
+    &__info {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    &__text {
+      padding: 40px 0 20px;
+      margin: 0 auto;
+    }
+  }
+
+  .sale {
+    &__desc {
+      font-size: 20px;
+      line-height: 29px;
+    }
+
+    &__title {
+      font-size: 35px;
+    }
+  }
+
+  .purchase {
+    padding: 40px 0;
+  }
+
+  .form__btn {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .blog__info-button {
+    padding: 15px;
+  }
+
+
+  .reviews {
+    &__desc {
+      font-size: 18px;
+      line-height: 25px;
+      max-width: 300px;
+    }
+
+    &__inner .slick-dots {
+      margin-left: 90px;
+    }
+
+  }
+
+
+}
+
+@media (max-width:390px) {
+  .sale {
+    &__title {
+      font-size: 29px;
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      padding-top: 24px;
+    }
+
+    &__desc {
+      font-size: 17px;
+    }
+  }
+
+  .footer__social {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .title {
+    font-size: 21px;
+  }
+
+  .reviews {
+    &__desc {
+      max-width: 270px;
+    }
+  }
+
+  .popup {
+
+    &__content,
+    &-cart__wrapper,
+    &-wishlist__wrapper {
+      max-width: 280px;
+    }
+
+
+  }
+
+  .foodies__content-items,
+  .popular-products__items {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  }
+}

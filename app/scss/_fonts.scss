@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'OpenSans-Light';
+  font-weight: 300;
+  font-style: normal;
+  src: local('OpenSans-Light'),
+    url('../fonts/OpenSans-Light.woff2') format('woff2'),
+    url('../fonts/OpenSans-Light.woff') format('woff');
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local('OpenSans-Regular'),
+    url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+    url('../fonts/OpenSans-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+
+
+
+@font-face {
+  font-family: 'Comfortaa-VariableFont_wght';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Comfortaa-VariableFont_wght'),
+    url('../fonts/Comfortaa-VariableFont_wght.woff2') format('woff2'),
+    url('../fonts/Comfortaa-VariableFont_wght.woff') format('woff');
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'YesevaOne-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local('YesevaOne-Regular'),
+    url('../fonts/YesevaOne-Regular.woff2') format('woff2'),
+    url('../fonts/YesevaOne-Regular.woff') format('woff');
+  font-display: swap;
+}

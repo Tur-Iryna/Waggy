@@ -1,0 +1,20 @@
+body {
+  @extend %comfortaa-400;
+  font-size: 26px;
+  line-height: 28px;
+  color: $text-color;
+}
+
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+
+.title {
+  font-size: 32px;
+  line-height: 40px;
+  color: $accent-color;
+}
