@@ -1,7 +1,6 @@
 const wishlistBtn = document.querySelectorAll('[data-wishlist]'),
   wishlistWrapper = document.querySelector('.popup-wishlist__content'),
   wishlistAddCart = document.querySelector('.popup-wishlist__btn'),
-  wishlistBtnDelete = document.querySelectorAll('.wishlist-item__delete'),
   wishlistCheckbox = document.querySelectorAll('.wishlist');
 
 
@@ -72,10 +71,11 @@ window.addEventListener('click', (e) => {
 
   };
 
-
+  const wishlistBtnDelete = document.querySelectorAll('.wishlist-item__delete');
   wishlistBtnDelete.forEach(button => {
     button.addEventListener('click', () => {
       const wishlistBtnItem = button.closest('.wishlist-item');
+      console.log(wishlistBtnItem);
       wishlistBtnItem.remove();
       statusProductsInWishlist();
       updateColorImage();
@@ -99,7 +99,7 @@ wishlistCheckbox.forEach(elem => {
 function statusProductsInWishlist() {
   const wishlistBtn = document.querySelector('.popup-wishlist__btn');
 
-  if (wishlistWrapper.children.length > 2) {
+  if (wishlistWrapper.children.length >= 2) {
     wishlistWrapper.style.overflowY = "scroll";
   } else if (wishlistWrapper.children.length === 0) {
     wishlistBtn.style.display = 'none';

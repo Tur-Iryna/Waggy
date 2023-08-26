@@ -1,8 +1,8 @@
 
 
 export const formsSubmit = () => {
-  const formBox = document.querySelectorAll('form'),
-    inputs = document.querySelectorAll('input');
+  const formBox = document.querySelectorAll('[data-form]'),
+    inputs = document.querySelectorAll('[data-input]');
 
   const message = {
     loading: 'Загрузка...',
@@ -35,19 +35,25 @@ export const formsSubmit = () => {
 
       let messageStatus = document.createElement('div');
       messageStatus.classList.add('status');
-      element.appendChild(messageStatus);
+      const modalContent = document.querySelector('.popup-cart__total');
+      modalContent.innerHTML = '';
+      modalContent.appendChild(messageStatus);
 
 
       const formData = new FormData(element);
       postData('server.php', formData)
         .then(result => {
           console.log(result);
+          const cartNum = document.querySelector('.cart__num');
+          cartNum.innerText = 0;
           messageStatus.textContent = message.success;
+
         })
         .catch(() => messageStatus.textContent = message.failure)
         .finally(() => {
           clearInput();
           setTimeout(() => {
+
             messageStatus.remove();
           }, 3000);
         })

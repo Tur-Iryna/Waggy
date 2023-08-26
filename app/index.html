@@ -15,11 +15,11 @@
     <div class="container">
       <div class="header__inner">
         <div class="header__top">
-          <a class="logo" href="#">
+          <a class="logo header__logo" href="#">
             <img class="logo__img" src="images/icons/logo.svg" alt="логотип">
           </a>
           <form class="search-form">
-            <input class="search-form__input" id="input-search" placeholder="Пошук товарів">
+            <input class="search-form__input" placeholder="Пошук товарів">
             <button class=" search-form__btn" type="submit">
               <img class="search-form__img" src="images/icons/search.svg" alt="пошук">
             </button>
@@ -740,10 +740,10 @@
       <div class="container">
         <div class="purchase__inner">
           <h3 class="purchase__title title">Даруємо <span>знижку -20%</span> на першу покупку</h3>
-          <form class="purchase__form" action="#">
-            <input class="form__input purchase__input" name="email" type="text" placeholder="Введіть E-mail">
-            <input class="form__input purchase__input" name="password" type="text" placeholder="Ваш пароль">
-            <input class="form__input purchase__input" name="passwordsecond" type="text"
+          <form class="purchase__form" data-form action="#">
+            <input class="form__input purchase__input" data-input name="email" type="text" placeholder="Введіть E-mail">
+            <input class="form__input purchase__input" data-input name="password" type="text" placeholder="Ваш пароль">
+            <input class="form__input purchase__input" data-input name="passwordsecond" type="text"
               placeholder="Підтвердіть пароль">
             <button class="form__btn purchase__btn" type="submit">Зареєструватись</button>
           </form>
@@ -754,7 +754,7 @@
       <div class="container">
         <div class="blog__info">
           <h2 class="blog__info-title title">Блог</h2>
-          <button class="blog__info-button" type="submit" data-button>Переглянути всі
+          <button class="blog__info-button" type="submit" data-button> Переглянути всі
             <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7.46304 10.7312L11.7487 6.14792C11.8284 6.06286 11.8916 5.96184 11.9347 5.85064C11.9778 5.73943 12 5.62023 12 5.49984C12 5.37945 11.9778 5.26024 11.9347 5.14904C11.8916 5.03783 11.8284 4.93681 11.7487 4.85176L7.46304 0.268444C7.38346 0.183337 7.28898 0.115826 7.185 0.0697664C7.08103 0.0237068 6.96959 0 6.85704 0C6.7445 0 6.63306 0.0237068 6.52908 0.0697664C6.42511 0.115826 6.33063 0.183337 6.25105 0.268444C6.09033 0.440326 6.00004 0.673447 6.00004 0.916524C6.00004 1.1596 6.09033 1.39272 6.25105 1.56461L9.07358 4.58318H0.857131C0.629805 4.58318 0.411791 4.67975 0.251048 4.85166C0.0903045 5.02357 0 5.25672 0 5.49984C0 5.74295 0.0903045 5.97611 0.251048 6.14802C0.411791 6.31992 0.629805 6.4165 0.857131 6.4165H9.07358L6.25105 9.43507C6.17118 9.52 6.1078 9.62098 6.06454 9.73221C6.02129 9.84343 5.99903 9.9627 5.99903 10.0832C5.99903 10.2036 6.02129 10.3229 6.06454 10.4341C6.1078 10.5453 6.17118 10.6463 6.25105 10.7312C6.33058 10.8164 6.42504 10.884 6.52903 10.9301C6.63301 10.9763 6.74447 11 6.85704 11C6.96961 11 7.08108 10.9763 7.18506 10.9301C7.28905 10.884 7.3835 10.8164 7.46304 10.7312Z"
@@ -978,18 +978,18 @@
           <a class="popup__btn-tab" href="#" data-tab="#tab-2">Реєстрація</a>
         </div>
         <div class="popup__btn-content">
-          <div class="popup__btn-content__box" id="tab-1">
-            <input class="popup__input" type="text" placeholder="E-mail">
-            <input class="popup__input" type="text" placeholder="Пароль">
+          <div class="popup__btn-content__box" data-form id="tab-1">
+            <input class="popup__input" data-input type="text" placeholder="E-mail">
+            <input class="popup__input" data-input type="text" placeholder="Пароль">
             <button class="popup__btn">Увійти</button>
             <a class="popup__btn-link" href="#">Забули пароль?</a>
           </div>
-          <div class="popup__btn-content__box" id="tab-2">
-            <input class="popup__input" type="text" placeholder="Ваше ім'я">
-            <input class="popup__input" type="text" placeholder="Телефон">
-            <input class="popup__input" type="text" placeholder="E-mail">
-            <input class="popup__input" type="text" placeholder="Пароль">
-            <input class="popup__input" type="text" placeholder="Підтвердіть пароль">
+          <div class="popup__btn-content__box" data-form id="tab-2">
+            <input class="popup__input" data-input type="text" placeholder="Ваше ім'я">
+            <input class="popup__input" data-input type="text" placeholder="Телефон">
+            <input class="popup__input" data-input type="text" placeholder="E-mail">
+            <input class="popup__input" data-input type="text" placeholder="Пароль">
+            <input class="popup__input" data-input type="text" placeholder="Підтвердіть пароль">
             <button class="popup__btn">Реєстрація</button>
           </div>
         </div>
@@ -1010,9 +1010,9 @@
         </p>
         <span class="popup-cart__price">0</span>
         <span class="popup-cart__currency">грн.</span>
-        <form class="popup-cart__contacts" action="#">
+        <form class="popup-cart__contacts" data-form action="#">
           <p class="popup-cart__desc">Оформити замовлення</p>
-          <input class="popup-cart__input" name="phone" type="text" placeholder="Ваш номер телефона">
+          <input class="popup-cart__input" data-input name="phone" type="text" placeholder="Ваш номер телефона">
           <button class="popup-cart__btn" type="submit">Замовити</button>
         </form>
       </div>

@@ -101,7 +101,7 @@
       padding: 0;
       cursor: pointer;
       position: absolute;
-      top: 20px;
+      top: 43px;
       right: 10px;
       font-size: 12px;
 
@@ -150,7 +150,6 @@
     transform: translateY(-8%);
     top: 90px;
     width: 100%;
-    height: 100%;
     padding-left: 10px;
   }
 
@@ -198,22 +197,35 @@
 @media (max-width:850px) {
   .header {
     &__top {
-      padding: 15px;
-      flex-direction: column;
+      padding: 15px 0;
+      justify-content: space-around;
+    }
+
+    &__contacts {
+      display: none;
     }
   }
 
   .search-form {
     &__input {
       display: none;
-      order: 2;
+
+    }
+
+    &__input.active-search {
+      display: block;
     }
 
     &__btn {
       border: none;
-      box-shadow: none;
+    }
+
+    &__input.active-search+.search-form__btn {
+      border: 1px solid #EAEAEA;
     }
   }
+
+
 
   .slider-box {
     &__img {
@@ -238,7 +250,7 @@
   }
 
   .top-slider {
-    padding-top: 90px;
+    padding-top: 50px;
   }
 
   .popup {
@@ -250,16 +262,21 @@
     }
 
     &__close,
-    &-wishlist__close,
     &-cart__close {
       right: 38px;
+    }
+
+    &-wishlist__close,
+    &__close {
+      right: -20px;
+      top: -38px;
     }
   }
 }
 
 
 @media (max-width:750px) {
-  .best-products__info {
+  .popular-products__info {
     flex-direction: column;
   }
 
@@ -348,7 +365,13 @@
 
     &__items {
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      justify-items: center;
     }
+  }
+
+  .foodies__content-items,
+  .popular-products__items {
+    justify-items: center;
   }
 
   .foodies,
@@ -362,7 +385,7 @@
     }
   }
 
-  .best-products {
+  .popular-products {
     padding: 40px 0;
     padding-bottom: 60px;
 
@@ -401,7 +424,7 @@
   }
 
   .title {
-    font-size: 30px;
+    font-size: 27px;
 
   }
 
@@ -413,6 +436,7 @@
       max-width: 450px;
     }
 
+    &__close,
     &-cart__close {
       right: -15px;
       font-size: 30px;
@@ -434,6 +458,12 @@
 
   .cart-item__content-title {
     font-size: 13px;
+  }
+
+  .wishlist-item {
+    flex-direction: column;
+    margin: 10px 0 25px;
+    gap: 5px;
   }
 }
 
@@ -495,17 +525,37 @@
     }
   }
 
+  .header__logo.active-logo {
+    display: none;
+  }
+
 }
-
-
 
 @media (max-width:490px) {
   .popup {
+    &__btn-controls {
+      font-size: 18px;
+    }
 
     &__content,
     &-cart__wrapper,
     &-wishlist__wrapper {
       max-width: 350px;
+    }
+
+    &-cart__content,
+    &__content &-wishlist__content {
+      width: 280px;
+    }
+
+    &__title,
+    &-wishlist__title {
+      font-size: 19px;
+    }
+
+    &-wishlist__close {
+      font-size: 32px;
+
     }
 
     &-cart__btn {
@@ -530,13 +580,24 @@
       margin-left: 0;
     }
   }
+
+  .wishlist-item__delete {
+    margin-left: 0;
+  }
 }
 
 
 @media (max-width:450px) {
-  .header__contacts {
-    font-size: 16px;
+  .header {
+    &__top {
+      justify-content: space-between;
+    }
+
+    &__contacts {
+      font-size: 16px;
+    }
   }
+
 
   .slider-box {
     &__info {
@@ -588,10 +649,23 @@
 
   }
 
+  .menu__btn {
+    top: 18px;
+    right: 22px;
+  }
 
+  .search-form {
+    margin-top: 15px;
+  }
 }
 
 @media (max-width:390px) {
+
+  .search-form__input {
+    width: 190px;
+    padding: 10px;
+  }
+
   .sale {
     &__title {
       font-size: 29px;
@@ -607,10 +681,21 @@
     }
   }
 
-  .footer__social {
-    flex-direction: column;
-    gap: 20px;
+  .footer {
+    &__input {
+      height: 42px;
+    }
+
+    &__btn {
+      right: 46px;
+    }
+
+    &__social {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
+
 
   .title {
     font-size: 21px;
@@ -630,6 +715,28 @@
       max-width: 280px;
     }
 
+    &__btn-controls {
+      flex-direction: column;
+      font-size: 18px;
+      gap: 5px;
+
+    }
+
+    &__btn {
+      padding: 10px 20px;
+    }
+
+    &__close {
+      font-size: 29px;
+    }
+
+    &__input {
+      max-width: 240px;
+    }
+
+    &__title {
+      font-size: 21px;
+    }
 
   }
 
@@ -637,4 +744,5 @@
   .popular-products__items {
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   }
+
 }

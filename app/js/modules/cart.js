@@ -128,7 +128,7 @@ function cartCalcPrice() {
 
 
 function statusProductsInCart() {
-  if (cartWrapper.children.length > 2) {
+  if (cartWrapper.children.length >= 2) {
     cartWrapper.style.overflowY = "scroll";
   } else if (cartWrapper.children.length === 0) {
     cartTitle.innerText = 'Ваш кошик пустий';

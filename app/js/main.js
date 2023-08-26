@@ -78,6 +78,18 @@ window.addEventListener('DOMContentLoaded', () => {
   modals();
   formsSubmit();
 
+
+  //search 
+
+  const searchInput = document.querySelector('.search-form__input'),
+    searchBtn = document.querySelector('.search-form__btn'),
+    logo = document.querySelector('.header__logo');
+
+  searchBtn.addEventListener('click', () => {
+    searchInput.classList.toggle('active-search');
+    logo.classList.toggle('active-logo');
+  });
+
   //tabs
   const tabsBtn = document.querySelectorAll('.popup__btn-tab');
   const contentTabsBtn = document.querySelectorAll('.popup__btn-content__box');
@@ -106,6 +118,9 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   document.querySelector('.popup__btn-tab').click();
+
+
+
 
   //menu
   const menuBtn = document.querySelector('.menu__btn');
