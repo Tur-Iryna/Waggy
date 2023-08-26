@@ -95,7 +95,8 @@ window.addEventListener('DOMContentLoaded', () => {
     searchBtn = document.querySelector('.search-form__btn'),
     logo = document.querySelector('.header__logo');
 
-  searchBtn.addEventListener('click', () => {
+  searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     searchInput.classList.toggle('active-search');
     logo.classList.toggle('active-logo');
   });
