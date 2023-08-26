@@ -659,6 +659,8 @@
   }
 }
 
+
+
 @media (max-width:390px) {
 
   .search-form__input {
@@ -683,11 +685,11 @@
 
   .footer {
     &__input {
-      height: 42px;
+      height: 50px;
     }
 
     &__btn {
-      right: 46px;
+      right: 55px;
     }
 
     &__social {
@@ -745,4 +747,14 @@
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   }
 
+}
+
+
+
+
+
+@media (max-width: 360px) {
+  .footer__btn {
+    right: 48px;
+  }
 }

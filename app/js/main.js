@@ -68,6 +68,16 @@ $(function () {
   AOS.init();
 
 
+
+
+  if (window.innerWidth < 450) {
+    AOS.init({
+      disable: true,
+    });
+  }
+
+
+
   const mixer = mixitup('.foodies__content');
 
 });
