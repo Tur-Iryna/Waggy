@@ -1,4 +1,4 @@
-https://tur-iryna.github.io/waggy
+https://tur-iryna.github.io/waggy/
 
 
 One lending page with responsive layout for pet shop.
