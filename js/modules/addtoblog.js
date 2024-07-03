@@ -4,7 +4,6 @@ let blogItemsAdd = 4;
 let blogItemsLoaded = 0;
 
 blogBtn.addEventListener('click', loadedBlogItems);
-
 async function loadedBlogItems() {
   try {
     const response = await fetch('json/blog.json'),
@@ -24,9 +23,7 @@ async function loadedBlogItems() {
 </div>
 </div>
 `;
-
-
-      blogContainer.insertAdjacentHTML('beforeend', blogItem);
+ blogContainer.insertAdjacentHTML('beforeend', blogItem);
     });
     blogItemsLoaded += blogItemsAdd;
     if (blogItemsLoaded >= data.blog.length) {
