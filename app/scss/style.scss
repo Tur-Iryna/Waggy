@@ -4,8 +4,6 @@
 @import 'global';
 @import 'libs';
 
-
-
 .header {
   position: fixed;
   left: 0;
@@ -13,7 +11,6 @@
   top: 0px;
   z-index: 90;
   background-color: #ffffff;
-
   &__top {
     padding: 34px 0 25px;
     display: flex;
@@ -21,21 +18,16 @@
     align-items: center;
     border-bottom: 1px solid #EDEDED;
   }
-
-
   &__contacts {
     font-size: 19px;
     line-height: 20px;
     display: flex;
     gap: 65px;
   }
-
   &__phone {
     color: $text-color;
     display: inline-block;
-
   }
-
   &__text {
     display: block;
     @extend %comfortaa-400;
@@ -44,31 +36,23 @@
     color: #908F8D;
     text-align: right;
   }
-
   &__link {
     @extend %comfortaa-400;
     font-size: 17px;
     color: $text-color;
   }
-
   &__email {
     color: $text-color;
   }
-
   &__bottom {
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
-
-
   }
 }
 
-
 .search-form {
   display: flex;
-
-
   &__input {
     border: 1px solid #EAEAEA;
     border-right: none;
@@ -81,24 +65,18 @@
     @extend %comfortaa-400;
     font-size: 15px;
     line-height: 18px;
-
     &::placeholder {
       color: #908F8D;
       font-size: 15px;
       line-height: 18px;
     }
-
     &.active {
       display: block;
-
     }
-
     &.active:focus+.search-form__btn {
       border: 1px solid #EAEAEA;
-
     }
   }
-
   &__btn {
     padding: 15px;
     background-color: transparent;
@@ -108,11 +86,6 @@
     border-bottom-right-radius: 4px;
     cursor: pointer;
   }
-
-
-
-
-
 }
 
 .categories {
@@ -120,35 +93,26 @@
     transform: translate(0px, 0px);
     display: block;
     pointer-events: all;
-
   }
-
   &:hover .categories__img {
     transform: rotate(-180deg);
   }
-
   &__dropdown {
     @extend %comfortaa-400;
     font-size: 19px;
     line-height: 10px;
     color: $text-color;
-
-
   }
-
-
   &__btn {
     background-color: transparent;
     padding: 0;
     border: none;
     cursor: pointer;
   }
-
   &__img {
     margin: 0 0 3px 5px;
     transition: all .3s ease 0s;
   }
-
   &__menu {
     position: relative;
     padding: 15px;
@@ -158,31 +122,22 @@
     transform: translate(0px, 10px);
     pointer-events: none;
   }
-
-
   &__item {
     display: flex;
     align-items: center;
     padding: 5px 0;
-
-
-
   }
-
   &__link {
     color: $text-color;
     @extend %comfortaa-400;
     font-size: 19px;
     line-height: 20px;
     transition: all .3s;
-
     &:hover {
       border-bottom: 1px solid $accent-color;
     }
   }
 }
-
-
 .menu {
   &__btn {
     border: none;
@@ -193,7 +148,6 @@
     color: $text-color;
     width: 30px;
     padding: 10px 0;
-
     &::before,
     &::after {
       content: '';
@@ -204,16 +158,13 @@
       background-color: $text-color;
       cursor: pointer;
     }
-
     &::before {
       top: 7px;
     }
-
     &::after {
       bottom: 7px;
     }
   }
-
   &__btn {
     span {
       display: block;
@@ -222,39 +173,32 @@
       cursor: pointer;
     }
   }
-
   &__list {
     display: flex;
     gap: 50px;
   }
-
   &__link {
     @extend %comfortaa-400;
     font-size: 19px;
     line-height: 20px;
     color: $text-color;
     transition: all .3s;
-
     &:hover {
       color: $accent-color;
     }
   }
-
   &__img-close {
     display: none;
   }
 }
 
-
 .user-nav {
   display: flex;
   align-items: center;
   gap: 35px;
-
   &__link {
     position: relative;
   }
-
   &__num {
     @extend %comfortaa-400;
     font-size: 11px;
@@ -271,9 +215,7 @@
     justify-content: center;
     align-items: center;
   }
-
 }
-
 
 .wishlist-box {
   width: 100%;
@@ -285,31 +227,23 @@
   transition: opacity .25s linear;
 }
 
-
-
-
 .cart {
   &__link {
     position: relative;
     display: block;
   }
-
   &-item {
     display: flex;
     align-items: center;
     gap: 30px;
     margin: 20px 0 30px;
   }
-
   &-image {
     margin: 0 auto;
     width: 200px;
     height: 270px;
     background-color: $bg-card;
   }
-
-
-
   &__num {
     @extend %comfortaa-400;
     font-size: 11px;
@@ -325,20 +259,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
-
   &-delete {
     width: 24px;
     margin: 0 auto;
   }
-
   &-delete__img {
     margin-top: 20px;
     cursor: pointer;
-
   }
-
   &-box {
     width: 100%;
     height: 100vh;
@@ -348,94 +277,72 @@
     z-index: 90;
     transition: opacity .25s linear;
   }
-
   &-item__delete {
     cursor: pointer;
   }
-
   &-item__image {
     background-color: $bg-card;
     width: 100px;
   }
-
   &-item__content {
     flex-grow: 1;
   }
-
   &-item__content-title {
     font-size: 18px;
     color: $text-color;
   }
-
   &-item__content-price {
     font-size: 16px;
-
   }
-
   &-item__counter {
     margin-left: 40px;
     display: flex;
     border: 1px solid $bg-card;
-
   }
-
   &-item__counter-minus,
   &-item__counter-plus {
     background-color: $bg-card;
     width: 25px;
     cursor: pointer;
   }
-
-
   &-item__counter-number {
     width: 30px;
     font-size: 17px;
   }
 }
 
-
 .top-slider {
   background-color: $bg-color;
   padding-top: 30px;
 }
-
 .slider-box {
   &__info {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     gap: 20px;
-
-
   }
-
   &__text {
     max-width: 600px;
     padding-top: 140px;
     font-size: 40px;
   }
-
   &__title {
     margin-bottom: 40px;
     @extend %yesevaone-400;
     line-height: 70px;
-
     span {
       color: $accent-color;
       font-size: 75px;
       line-height: 80px;
-
     }
   }
-
-
   &__btn {
     @extend %btn;
     padding: 20px 30px;
     text-transform: uppercase;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
-
 }
 
 .slick-dots {
@@ -448,7 +355,6 @@
   position: relative;
   z-index: 10;
   margin-left: 60px;
-
   & button {
     width: 12px;
     height: 12px;
@@ -457,10 +363,7 @@
     background-color: transparent;
     border: 1px solid $text-color;
     padding: 0;
-
-
   }
-
   & .slick-active button {
     background-color: $text-color;
   }
@@ -476,13 +379,11 @@
   align-items: center;
   gap: 80px;
   flex-wrap: wrap;
-
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   &__link {
     color: $text-color;
     font-size: 20px;
@@ -491,17 +392,14 @@
   }
 }
 
-
 .products__clothing {
   padding-top: 150px;
-
   &-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
   }
-
   &-button {
     background-color: transparent;
     @extend %btn;
@@ -517,15 +415,12 @@
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     gap: 20px;
   }
-
-
   &__item {
     flex-basis: 310px;
     height: 465px;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
-
     &:hover {
       transform: translateY(-5px);
     }
@@ -539,13 +434,10 @@
     margin-bottom: 20px;
     position: relative;
   }
-
   &__img {
     object-fit: cover;
     margin: 0 auto;
   }
-
-
   &__link-icon {
     border: 1px solid #F5F5F5;
     padding: 10px;
@@ -555,15 +447,12 @@
     text-align: center;
     border-radius: 4px;
     cursor: pointer;
-
     &:hover {
       path {
         fill: crimson;
       }
-
     }
   }
-
   &__position,
   &__sale {
     position: absolute;
@@ -575,19 +464,14 @@
     border-radius: 6px;
     padding: 8px 12px;
   }
-
-
-
   &__title {
     @extend %comfortaa-400;
     margin-bottom: 5px;
     font-size: 19px;
   }
-
   &__link {
     color: $text-color;
   }
-
   &__price {
     @extend %comfortaa-400;
     line-height: 31px;
@@ -596,14 +480,11 @@
     display: inline-block;
     font-size: 18px;
   }
-
   &__buttons {
     display: flex;
     gap: 10px;
     align-items: center;
-
   }
-
   &__btn {
     @extend %btn;
     background-color: transparent;
@@ -615,24 +496,19 @@
 
 .star {
   margin-bottom: 10px;
-
-
 }
 
 .foodies {
   padding: 145px 0;
-
   &__info {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
   }
-
   &__title {
     margin-right: 100px;
   }
-
   &__btn {
     @extend %btn;
     background-color: transparent;
@@ -641,13 +517,11 @@
     border: none;
     @extend %comfortaa-400;
   }
-
   &__content-items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     gap: 50px 20px;
   }
-
   &__content-img {
     margin: 25px auto;
   }
@@ -655,12 +529,10 @@
 
 .foodies-filters {
   margin-right: 60px;
-
   &__box {
     display: flex;
     gap: 50px;
   }
-
   &__btn {
     color: $text-color;
     border: none;
@@ -672,29 +544,22 @@
     padding-bottom: 10px;
     border-width: 17px;
     border-bottom: 2px solid #D9D9D8;
-
     &:hover {
       border-bottom: 2px solid $accent-color;
     }
   }
-
 }
 
 .sale {
   background-color: $bg-color;
   padding: 35px 0 25px;
-
   &__inner {
     display: flex;
     justify-content: space-between;
-
   }
-
   &__text {
     padding: 175px 0 0 110px;
-
   }
-
   &__title {
     @extend %comfortaa-400;
     color: $accent-color;
@@ -702,36 +567,30 @@
     line-height: 50px;
     margin-bottom: 30px;
   }
-
   &__desc {
     font-size: 39px;
     line-height: 50px;
     margin-bottom: 30px;
   }
-
   &__link {
     @extend %btn;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 }
 
-
 .popular-products {
   padding: 45px 0;
-
   &__items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     gap: 50px 20px;
   }
-
   &__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
   }
-
   &__button {
     background-color: transparent;
     @extend %btn;
@@ -743,18 +602,14 @@
 
 .reviews {
   padding-bottom: 145px;
-
   &__content {
     padding-top: 20px;
     max-width: 1080px;
     margin: 0 240px auto;
   }
-
   &__box {
     position: relative;
     padding-left: 170px;
-
-
     &::before {
       content: '';
       position: absolute;
@@ -764,29 +619,20 @@
       height: 144px;
       top: -50px;
       left: 0;
-
     }
-
   }
-
-
-
   &__desc {
     font-size: 36px;
     line-height: 54px;
     max-width: 860px;
     color: #908F8D;
-
   }
-
   &__name {
     @extend %comfortaa-400;
     font-size: 15px;
     line-height: 18px;
   }
 }
-
-
 
 .reviews__inner .slick-dots {
   display: flex;
@@ -798,21 +644,15 @@
   position: relative;
   z-index: 10;
   margin-left: 410px;
-
-
 }
-
 
 .purchase {
   background-color: $bg-color;
   padding: 80px 0 120px;
-
-
   &__inner {
     max-width: 500px;
     margin: 0 auto;
     position: relative;
-
     &:after,
     &::before {
       content: '';
@@ -821,30 +661,24 @@
       background-repeat: no-repeat;
       width: 208px;
       height: 184px;
-
     }
 
     &:before {
       left: -265px;
       top: 0;
     }
-
     &:after {
       right: -265px;
       bottom: -60px;
     }
   }
-
   &__title {
     text-align: center;
     margin-bottom: 30px;
-
     &>span {
       color: $accent-color;
     }
   }
-
-
 }
 
 .form {
@@ -858,15 +692,12 @@
     padding: 10px 20px;
     outline: none;
     font-size: 14px;
-
     &::placeholder {
       font-size: 14px;
       color: #908F8D;
       @extend %comfortaa-400;
-
     }
   }
-
   &__btn {
     text-align: center;
     background-color: $text-color;
@@ -881,14 +712,12 @@
 
 .blog {
   padding: 150px 0;
-
   &__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
   }
-
   &__info-button {
     background-color: transparent;
     @extend %btn;
@@ -896,32 +725,24 @@
     border: none;
     @extend %comfortaa-400;
   }
-
   &__items {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
   }
-
   &__item {
     display: flex;
     flex-direction: column;
     flex-basis: 380px;
-
-
   }
-
   &__item-image {
     position: relative;
     margin-bottom: 20px;
-
   }
-
   &__item-img {
     width: 380px;
   }
-
   &__item-date {
     width: 80px;
     height: 80px;
@@ -933,8 +754,6 @@
     border-radius: 10px;
     padding: 15px 5px;
     font-size: 15px;
-
-
     & span {
       display: block;
       @extend %comfortaa-400;
@@ -942,21 +761,16 @@
       color: $accent-color;
     }
   }
-
-
   &__item-title {
     font-size: 20px;
     margin-bottom: 10px;
     flex: 4;
   }
-
   &__item-text {
     display: flex;
     flex-direction: column;
     flex: 1;
-
   }
-
   &__item-desc {
     @extend %comfortaa-400;
     font-size: 16px;
@@ -964,7 +778,6 @@
     margin-bottom: 20px;
     flex: 4;
   }
-
   &__item-link {
     text-transform: uppercase;
     border-bottom: 1px solid #908F8D;
@@ -973,14 +786,11 @@
     width: 100px;
     font-size: 14px;
     line-height: 17px;
-
   }
-
 }
 
 .gallery {
   padding-bottom: 150px;
-
   &__items {
     display: flex;
     justify-content: space-between;
@@ -988,7 +798,6 @@
     gap: 35px;
     padding-bottom: 150px;
   }
-
   &__box {
     border: 1px solid #D9D9D8;
     border-radius: 50%;
@@ -998,37 +807,29 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto 20px;
-
   }
-
   &__title {
     font-size: 16px;
     line-height: 18px;
     margin-bottom: 10px;
     text-align: center;
-
   }
-
   &__text {
     font-size: 13px;
     line-height: 17px;
     text-align: center;
-
   }
-
   &__content {
     margin-left: 10px;
     position: relative;
     transition: all .2s ease;
   }
-
   &__image:hover {
     background-color: #908F8D;
     opacity: 1;
     filter: brightness(0.5);
     border-radius: 10px;
   }
-
   &__link:hover::after {
     content: '';
     position: absolute;
@@ -1041,43 +842,31 @@
   }
 }
 
-
-
 .footer {
   padding-bottom: 110px;
-
   &__inner {
     display: flex;
     gap: 70px;
-
   }
-
   &__form {
     display: flex;
   }
-
   &__box {
     flex-basis: 400px;
   }
-
-
-
   &__list-text {
     margin: 10px 10px 0;
     display: inline-block;
     color: $text-color;
     font-size: 19px;
   }
-
   &__list-item:last-child {
     margin-bottom: 20px;
   }
-
   &__social {
     display: flex;
     gap: 24px;
   }
-
   &__social-link {
     border: 1px solid #D9D9D8;
     width: 45px;
@@ -1087,10 +876,8 @@
     justify-content: center;
     align-items: center;
     transition: all .3s ease;
-
     &:hover {
       background-color: $accent-color;
-
       svg {
         path {
           fill: #ffffff;
@@ -1098,24 +885,18 @@
       }
     }
   }
-
   &__title {
     font-size: 19px;
     margin-bottom: 20px;
   }
-
   &__list-link {
     color: $text-color;
     font-size: 17px;
   }
-
   &__text {
     font-size: 16px;
     margin-bottom: 10px;
   }
-
-
-
   &__input {
     width: 250px;
     border: 1px solid #D9D9D8;
@@ -1127,7 +908,6 @@
     outline: none;
     position: relative;
   }
-
   &__btn {
     background-color: transparent;
     border: none;
@@ -1142,21 +922,14 @@
   display: none;
 }
 
-
 .none {
   display: none;
 }
 
-
-
-
-
 .message-modal {
   margin: 0 auto;
   display: block;
-
 }
-
 
 .counter-wrapper {
   &__items {
@@ -1168,18 +941,15 @@
     width: 100px;
     margin: 0 auto;
   }
-
   &__item {
     height: 30px;
     width: 40px;
     cursor: pointer;
-
     &:hover {
       background-color: $accent-color;
       border-radius: 20px;
     }
   }
-
   &__control {
     font-size: 17px;
     height: 30px;
@@ -1187,15 +957,11 @@
   }
 }
 
-
 .main {
   padding-top: 140px;
 }
 
-
-
 .popup {
-
   &__user,
   &-cart,
   &-wishlist {
@@ -1208,7 +974,6 @@
     z-index: 99;
     background-color: rgba(0, 0, 0, 0.5);
   }
-
   &__content,
   &-cart__wrapper,
   &-wishlist__wrapper {
@@ -1226,7 +991,6 @@
     justify-content: space-between;
     align-items: center;
   }
-
   &__content {
     position: fixed;
     top: 10%;
@@ -1242,9 +1006,6 @@
     justify-content: start;
     align-items: center;
   }
-
-
-
   &__close,
   &-wishlist__close,
   &-cart__close {
@@ -1257,45 +1018,35 @@
     background: transparent;
     cursor: pointer;
   }
-
   &__title {
     font-size: 27px;
     text-align: center;
     margin-bottom: 30px;
-
   }
-
   &-cart__title,
   &-wishlist__title {
     padding-bottom: 10px;
     border-bottom: 2px solid $bg-color;
   }
-
   &__btn-controls {
     display: flex;
     gap: 40px;
     justify-content: center;
     font-size: 22px;
     margin-bottom: 30px;
-
     &>a {
       color: $text-color;
     }
-
   }
-
-
   &__btn-content__box {
     display: none;
   }
-
   &__btn-content__box.active {
     display: block;
     width: 300px;
     margin: 0 auto;
     text-align: center;
   }
-
   &__input {
     max-width: 300px;
     width: 100%;
@@ -1304,13 +1055,10 @@
     outline: none;
     height: 35px;
     font-size: 15px;
-
     &::placeholder {
       font-size: 13px;
     }
-
   }
-
   &__btn,
   &-wishlist__btn,
   &-cart__btn {
@@ -1321,14 +1069,11 @@
     margin: 10px 0;
     text-transform: uppercase;
   }
-
-
   &__btn-link {
     display: block;
     color: $accent-color;
     font-size: 15px;
   }
-
   &-cart__input {
     display: block;
     max-width: 300px;
@@ -1338,23 +1083,18 @@
     padding: 10px;
     height: 40px;
     border: 1px solid $bg-card;
-
     &::placeholder {
       font-size: 13px;
       text-align: center;
     }
   }
-
   &-cart__total {
     font-size: 16px;
-
   }
-
   &-cart__text {
     display: inline;
   }
 }
-
 
 .wishlist-item {
   margin: 20px 0 30px;
@@ -1362,44 +1102,32 @@
   align-content: space-evenly;
   align-items: center;
   gap: 20px;
-
   &__image {
     background-color: $bg-card;
     width: 100px;
   }
-
   &__content {
     width: 190px;
   }
-
   &__content-title {
     font-size: 18px;
     color: $text-color;
   }
-
   &__content-price {
     font-size: 16px;
-
   }
-
   &__delete {
     margin-left: 80px;
     cursor: pointer;
   }
 }
 
-
 .show {
   display: block;
 }
 
-
 .status {
   font-size: 20px;
-
 }
-
-
-
 
 @import 'media';
