@@ -1,39 +1,33 @@
-
 window.addEventListener('click', (e) => {
   if (e.target.hasAttribute('data-cart')) {
     const card = e.target.closest('.products-content__item');
-
     const productInfo = {
       id: card.dataset.id,
       imgSrc: card.querySelector('.products-content__img').getAttribute('src'),
       title: card.querySelector('.products-content__title').innerText,
       price: card.querySelector('.products-content__price').innerText
     };
-
     addItemToCart(productInfo);
-  }
-
+  };
 
   if (e.target.dataset.action === 'minus') {
     const wrapperCounter = e.target.closest('.cart-item__counter');
     let counterEl = wrapperCounter.querySelector('[data-counter]');
     if (counterEl.innerText > 0)
       counterEl.innerText = --counterEl.innerText;
-  }
+  };
 
   if (e.target.dataset.action === 'plus') {
     const wrapperCounter = e.target.closest('.cart-item__counter');
     let counterEl = wrapperCounter.querySelector('[data-counter]');
     counterEl.innerText = ++counterEl.innerText;
-  }
+  };
   cartCalcPrice();
-
 
   const deleteCard = document.querySelectorAll('.cart-item__delete'),
     cartItems = document.querySelectorAll('.cart-item'),
     cartItemCount = cartItems.length;
-
-  deleteCard.forEach(button => {
+    deleteCard.forEach(button => {
     button.addEventListener('click', () => {
       const cartItem = button.closest('.cart-item');
       cartItem.remove();
@@ -44,27 +38,20 @@ window.addEventListener('click', (e) => {
         cartNum.innerText = 0;
         statusProductsInCart();
       }
-
-    })
-
+    });
   });
 });
-
-
 
 const cartWrapper = document.querySelector('.popup-cart__content'),
   cartNum = document.querySelector('.cart__num'),
   cartTitle = document.querySelector('.popup-cart__title'),
   cartPrice = document.querySelector('.popup-cart__total');
 
-
-
 function addItemToCart(productInfo) {
   const itemInCart = cartWrapper.querySelector(`[data-id="${productInfo.id}"]`);
   if (itemInCart) {
     const counterEl = itemInCart.querySelector('[data-counter]');
     counterEl.innerText = parseInt(counterEl.innerText) + 1;
-
   } else {
     const cardItem = `
   <div class="cart-item" data-id="${productInfo.id}">
@@ -98,22 +85,17 @@ function addItemToCart(productInfo) {
     </svg>
   </div>
 </div>`;
-
     cartWrapper.insertAdjacentHTML('beforeend', cardItem);
     cartNum.innerText = parseInt(cartNum.innerText) + 1;
     cartTitle.innerText = 'Ваше замовлення';
     cartPrice.style.display = 'block';
     statusProductsInCart();
   };
-
-}
-
-
+};
 
 function cartCalcPrice() {
   const cartItems = document.querySelectorAll('.cart-item');
   let totalPrice = 0;
-
   cartItems.forEach(item => {
     const totalPriceEl = document.querySelector('.popup-cart__price');
     const amountEl = item.querySelector('[data-counter]');
@@ -121,11 +103,8 @@ function cartCalcPrice() {
     const currentPrice = parseInt(amountEl.innerText) * parseInt(priceEl.innerText);
     totalPrice += currentPrice;
     totalPriceEl.innerText = totalPrice;
-
   });
-
-}
-
+};
 
 function statusProductsInCart() {
   if (cartWrapper.children.length >= 2) {
@@ -135,12 +114,3 @@ function statusProductsInCart() {
     cartPrice.style.display = 'none';
   }
 }
-
-
-
-
-
-
-
-
-
